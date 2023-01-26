@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>CLASSROOM AVAILABILITY</title>
+      <link href="style.css" rel="stylesheet">
+      <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-2dfeb8be594e47829083845a3ec66d52.png" />
+      <link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicon-2dfeb8be594e47829083845a3ec66d52.png" />
+      <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="/images/epn144.png" />
+      <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="/images/img/logos/apple-touch-icon-72x72.png" />
+      <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="/assets/apple-touch-icon-114x114-0ad7a10219e8eb20cacb15b2f7a83026.png" />
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/assets/bootstrap.min-a23b16d1137b95d1caa782e83b072994.css"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/assets/smart/fonts/font-awesome/css/font-awesome.min-584b556c43dea1111fa1e4d9d15cc479.css"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <style>
+         /* .center {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 7.6rem;
+         } */
+         html, body {
+         height: 100vh;
+         }
+         .first{
+         /* background-color: #e2e2e4; */
+         display: flex;
+         justify-content: center;
+         height: 75vh;
+         }
+         .second{
+         display: flex;
+         flex-direction: column;
+         margin-top: 40px;
+         }
+         .txt-blue{
+         color: #4647bf;
+         }
+         .txt-org {
+         color: orange;
+         }
+         .btn {
+         background: #4647bf;
+         border-radius: 15px;
+         margin-top: 5px;
+         }
+         .flex-center{
+         display: flex;
+         justify-content: center;
+         }
+         .cancel {
+         display: flex;
+         padding-top: 7.5rem;
+         justify-content: flex-end;
+         padding-bottom: 5rem;
+         }
+         body{
+         overflow-y: scroll;
+         overflow-x: hidden;
+         }
+         .logo-img1 {
+             margin: auto;
+             height: 100px;
+         }
+         .sign-in {
+         padding-top: 1.1rem;
+         font-size: 17px;
+         text-align: center;
+         }
+         /* .password {
+         width: -webkit-fill-available;
+         } */
+         .form input:focus {
+         outline: none;
+         }
+         .btn {
+         width: -webkit-fill-available;
+         }
+         .btn:focus {
+         outline: none;
+         }
+         input:-webkit-autofill {
+         color: #2a2a2a !important;
+         }
+         .form input {
+         border: 0;
+         border-bottom: 0.05rem solid black;
+         width: -webkit-fill-available;
+         background: transparent;
+         margin-bottom: 0.4rem;
+         }
+         .fa-eye {
+         position: absolute;
+         margin-left: -1.5rem;
+         }
+         .form p {
+         font-size: 11px;
+         color: #b22f2f;
+         }
+         .form {
+         padding-bottom:2rem !important
+         }
+         input:-webkit-autofill {
+         background: transparent !important;        }
+         .footer {
+         text-align: center;
+         background-color: #34495e;
+         margin: 0px;
+         color:white;
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         }
+         .form-input {
+         width: -webkit-fill-available;
+         padding-left: 1rem;
+         }
+         input:-webkit-autofill {transition: background-color 5000s ease-in-out 0s;}
+         @media only screen and (max-width: 600px) {
+         .first{
+         display:none;
+         }
+         .footer{
+         bottom: 0;
+         }
+         }
+        
+         .link a {
+         color:#4647bf;
+         float:right;
+         text-decoration: none;
+         }
+         .field-icon {
+         float: right;
+         margin-top: -25px;
+         position: relative;
+         z-index: 2;
+         }
+         .btn:hover {
+         color: #fff;
+         background-color: #4647bf;
+         }
+      </style>
+   </head>
+   <body>
+
+
+
+
+
+
+  <!-- navbar starts -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand navbar-new display-5" href="#">Name_Of_The_Project</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 space">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html" target="_blank">HOME</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="classroom.html" target="_blank">CLASSROOM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lab.html" target="_blank">LAB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="conference.html" target="_blank">CONFERENCE</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navbar ends -->
+  
+
+
+
+
+
+
+        <div id="erplogin">
+          <div class="row dist">
+             <div class="first  col-lg-6 ">
+                 
+                 
+ 
+ <div>
+ 
+ 
+ 
+ 
+ 
+ 
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide slides my-4 margins" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="image/classroom.jpg" alt="Los Angeles" class="d-block"
+          style="width:100%; height: 500px;">
+      </div>
+      <div class="carousel-item">
+        <img src="image/classroom_1.jpg" alt="Chicago" class="d-block"
+          style="width:100% ;height: 500px;">
+      </div>
+      <div class="carousel-item">
+        <img src="image/classroom_2.jpg" alt="New York" class="d-block"
+          style="width:100%; height: 500px;">
+      </div>
+    </div>
+
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
+ 
+             </div>
+             <div class="col-lg-6 flex-center">
+                <div class="second col-lg-8">
+                   <!-- <img class="center" src="https://pccoebucket.s3.ap-south-1.amazonaws.com/logo/Trust_Logo.png" style="height:150px;"> -->
+                   <!-- <marquee behavior="scroll" direction="left" scrollamount="8" bgcolor="#F39C12" onmouseover="this.stop();" onmouseout="this.start();"><b>Use Your Official Email as Username instead of PRN Number or Employee Code</b></marquee> -->
+                   <h2 class="sign-in">
+                       <span class="txt-blue" style="color:#09abd4">
+                           <strong>CHECK</strong>
+                       </span>
+                       <span class="txt-org" style="color:#152f49">
+                           <strong>AVAILABILITY</strong>
+                       </span>
+                   </h2>
+                   <br \>
+                   <br \>
+                   <form id="classroomform">
+                      <div class="form center-block" style="display: flex;">
+                         <div><i class="fa fa-user"  style="font-size:130%;"></i></div>
+                         <div class="form-input" style=" font-size:140%">
+                            <input type="text" class="form-group" name="day" id="day" placeholder="Enter Day : Eg:Monday.." autofocus"="" value="" style="width:100% !important;" required>
+                            <!-- <span style="color:red; font-weight:190;">Please Use Your Official Email As Username</span> -->
+                         </div>
+                      </div>
+                      <div class="form center-block" style="display: flex;">
+                         <div><i class="fa fa-lock" style="font-size:130%;"></i></div>
+                         <div class="form-input" style=" font-size:140%" >
+                          <input type="text" class="form-group" name="timeslot" id="timeslot" placeholder="Enter Timeslot : Eg:10-11pm" autofocus"="" value="" style="width:100% !important;" >
+                            
+                         </div>
+                      </div>
+                      <div class="form center-block" style="display: flex;">
+                        <div><i class="fa fa-lock" style="font-size:130%;"></i></div>
+                        <div class="form-input" style=" font-size:140%" >
+                         <input type="text" class="form-group" name="classroom" id="classroom" placeholder="Enter Classroom : Eg:6102" autofocus"="" value="" style="width:100% !important;" >
+                           
+                        </div>
+                     </div>
+                      <button type="submit" class="btn btn-primary btn-lg" style="background:#43c9eb;font-weight:600;">CHECK</button>
+ 
+                      
+                       
+                   </form>
+                   <!--<center><b><p style="color:#c63901;font-size:20px;">For any help contact contactus@edupluscampus.com</p></b></center>-->
+
+
+
+                   <div id="slots">
+
+                   </div>
+                   
+                  
+                    
+                </div>
+             </div>
+          </div>
+          <p class="footer">
+ 
+              <!--  <span class="form-row col-sm-12">
+                     <span class="col-sm-3"></span>
+                     <span class="col-sm-6">For Any Query, Please Contact Us,</span>
+                     <span class="col-sm-3"></span>
+               </span>
+               <br>
+               <span class="form-row col-sm-12">
+                   <span class="col-sm-4">
+                       Piyush Deshpande<br>
+                       Email : piyush.deshpande16@vit.edu
+                   </span>
+ 
+                   <span class="col-sm-4">
+                       Khushal Hasjia<br>
+                       Email : contactus@edupluscampus.com
+                   </span>
+ 
+                   <span class="col-sm-4">
+                         Dipali Mundada<br>
+                         Email : dmundada@eduplusnow.com
+                   </span>
+               </span>
+               <br><br><br> -->
+ 
+               <span class="form-row col-sm-12">
+                   <span class="col-sm-3"></span>
+                   <span class="col-sm-6">© Copyright VGESPL 2022.All Rights Reserved</span>
+                   <span class="col-sm-3"></span>
+               </span>
+          </p>
+       </div>
+       
+       <script>
+          
+ 
+ 
+          /*$(document).ready(function() {
+ 
+                  var remember = $.cookie('remember');
+                  if (remember == 'true')
+                  {
+                      var email = $.cookie('email');
+                      var password = $.cookie('password');
+                      // autofill the fields
+                      $('#username').val(email);
+                      $('#password').val(password);
+                  }
+           $("#login").submit(function() {
+                  if ($('#remember').is(':checked')) {
+                      var email = $('#username').val();
+                      var password = $('#password').val();
+ 
+                      // set cookies to expire in 14 days
+                      $.cookie('email', email, { expires: 14 });
+                      $.cookie('password', password, { expires: 14 });
+                      $.cookie('remember', true, { expires: 14 });
+                  }
+                  else
+                  {
+                      // reset cookies
+                      $.cookie('email', null);
+                      $.cookie('password', null);
+                      $.cookie('remember', null);
+                  }
+            });
+          });*/
+ 
+          const day = document.getElementById("day");
+          const timeslot = document.getElementById("timeslot");
+          const classroom = document.getElementById("classroom");
+          const slots = document.getElementById("slots");
+          document.getElementById("classroomform").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const params = {};
+            if (day.value) {
+              params["day"] = day.value;
+            }
+            if (timeslot.value) {
+              params["timeslot"] = timeslot.value;
+            }
+            if (classroom.value) {
+              params["classroom"] = classroom.value;
+            }
+            const response = await fetch("/classroom?" + new URLSearchParams(params))
+            const { availability } = await response.json();
+            console.log(availability)
+            while(slots.lastElementChild) {
+              slots.removeChild(slots.lastElementChild);
+            }
+            availability.forEach(slot => {
+              const element = document.createElement("span");
+              // element.classList.add("", "")
+              element.innerHTML = slot;
+              slots.append(element);
+            })
+          })
+       </script>
+       <script type="text/javascript" src="/assets/jquery.min-6dabce515c305b87cebce030cccb4811.js" ></script>
+       <script type="text/javascript" src="/assets/jquery.cookie.min-2fa5ccac942d85da49df23582917061d.js" ></script>
+       <script type="text/javascript" src="/assets/bootstrap.min.js" ></script>
+
+
+        
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- footer starts here -->
+
+ <div class="wmh-footer fixed-bottom">
+  <div class="wmh-mlr-90">
+    <div class="wmh-wdt-50">
+      <div class="wmh-plr-15">
+        <span class="tright">Copyright @ 2023 Pimpri Chinchwad College of Engineering <b>(PCCOE)</b></span>
+      </div>
+    </div>
+    <div class="wmh-wdt-50">
+      <div class="wmh-plr-15">
+        <div class="tright">
+          <span>Designed &amp; Developed by <a href="https://computer.pccoepune.com/" target="_blank" style="color:#fff;"><strong>Computer Engineering Department</strong></a></span>
+        </div>
+      </div>
+    </div> <div class="wmh-cleardiv"></div>	
+  </div>
+  </div>
+
+  <!-- footer ends here -->
+
+
+
+   </body>
+</html>
