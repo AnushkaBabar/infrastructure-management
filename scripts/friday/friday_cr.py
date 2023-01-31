@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_excel("Mon_Cr.xlsx")
+df = pd.read_excel("Fri_Cr.xlsx")
 
 choice=input()
 if choice=="a":
