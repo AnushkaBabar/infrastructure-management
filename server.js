@@ -28,9 +28,9 @@ app.get("/:type", async (req, res, next) => {
 
     let script_path;
     if (type == "classroom") {
-        script_path = /*path.resolve(*/`./scripts/${day}/${day}_cr.py`/*);*/
+        script_path = path.resolve(`./scripts/${day}/${day}_cr.py`);
     } else if (type == "lab") {
-        script_path = /*path.resolve(*/`./scripts/${day}/${day}_lab.py`/*);*/
+        script_path = path.resolve(`./scripts/${day}/${day}_lab.py`);
     }
     const child = child_process.spawn("python", [script_path], { cwd: path.resolve(`./scripts/${day}`) });
 
@@ -45,10 +45,10 @@ app.get("/:type", async (req, res, next) => {
     })
 
     if (timeslot != null) {
-        child.stdin.write("a\r\n");
+        child.stdin.write("a\n");
         child.stdin.write(`${timeslot.toLocaleLowerCase()}\n`);
     } else if (classroom != null) {
-        child.stdin.write("b\r\n");
+        child.stdin.write("b\n");
         child.stdin.write(`${classroom}\n`);
     } else {
         return res.json({

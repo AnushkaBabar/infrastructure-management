@@ -294,9 +294,9 @@
 
 
 
-                   <div id="slots">
+                   <ul id="slots" style="margin-top: 2rem;">
 
-                   </div>
+                   </ul>
                    
                   
                     
@@ -395,7 +395,7 @@
               slots.removeChild(slots.lastElementChild);
             }
             availability.forEach(slot => {
-              const element = document.createElement("span");
+              const element = document.createElement("li");
               // element.classList.add("", "")
               element.innerHTML = slot;
               slots.append(element);
